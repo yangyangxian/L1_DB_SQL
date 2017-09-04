@@ -63,3 +63,10 @@
   select top 111 * from handlers.REQUEST_CHAIN_DEF_OPTION_DEFS
   --request options which are bind to request and is used to store some info for the request
   select top 111 * from handlers.REQUEST_CHAIN_DEF_OPTIONS
+
+--Age Group
+SELECT *
+  FROM CLUB_AGE_GROUP cag
+  left join PARENT_ORG_AGE_GROUP poag on cag.ParentOrgAgeGroupId=poag.ParentOrgAgeGroupId
+  left join PARENT_ORG_reg_class porc on cag.PARENTORGregclassid=porc.PARENTORGregclassid
+  where clubid=15992
